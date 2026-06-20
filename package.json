@@ -9,6 +9,7 @@
     "build:dev": "vite build --mode development",
     "prerender": "node scripts/prerender.mjs",
     "generate": "vite build && node scripts/prerender.mjs",
+    "resume:pdf": "node scripts/resume-pdf.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },

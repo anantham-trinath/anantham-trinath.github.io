@@ -3,7 +3,7 @@
     "name": "Trinath Anantham",
     "firstName": "Trinath",
     "title": "Senior Engineering Manager · System Architect",
-    "tagline": "Ex founder, OneCompiler",
+    "tagline": "Co-founder & CTO, OneCompiler",
     "bio": "Versatile Engineering Leader with 12+ years of experience across backend, frontend, and cloud-based SaaS platforms. Skilled in building scalable systems, leading full-stack teams, and aligning technology with product strategy. Passionate about mentoring, innovation, and driving end-to-end execution.",
     "shortBio": "I build scalable platforms, ship developer tools, and lead full-stack teams across SaaS, fintech, and AI.",
     "yearsExperience": "12+",
@@ -11,7 +11,7 @@
     "availability": "Open For Freelance & Advisory",
     "available": true,
     "avatar": "/image.png",
-    "resumeUrl": "/Trinath.pdf",
+    "resumeUrl": "/Trinath-Resume.pdf",
     "location": "Hyderabad, India",
     "timezone": "IST · UTC+5:30",
     "email": "trinath.anantham@gmail.com",
@@ -155,7 +155,7 @@
       "stack": ["Java", "Spring Boot", "MongoDB", "React", "ELK", "AWS"]
     },
     {
-      "title": "Ex Co-Founder | Founding Engineer",
+      "title": "Co-Founder & CTO",
       "company": "OneCompiler",
       "companyDomain": "onecompiler.com",
       "companyLogo": "/logos/onecompiler.png",
@@ -163,7 +163,7 @@
       "period": "Nov 2019 — Feb 2022",
       "description": "Architected and developed an end-to-end online IDE platform using React, Next.js, React Native, Node.js, MongoDB, and Docker on AWS and Linux.",
       "achievements": [
-        "Scaled platform to support 2 million+ users globally",
+        "Scaled platform to support 5 million+ users globally",
         "Implemented real-time code execution and sandboxing",
         "Designed core product functionality from concept to launch",
         "Launched cross-platform mobile app with Flutter & Dart"
@@ -270,18 +270,18 @@
       "company": "OneCompiler",
       "year": "Nov 2019",
       "featured": true,
-      "role": "Co-founder & Architect",
+      "role": "Co-founder & CTO",
       "team": "Founding Team",
       "duration": "2 yrs 4 mos",
-      "description": "Co-founded and architected an online IDE platform supporting 60+ programming languages with real-time code execution and sandboxing. Scaled to serve 2 million+ users globally.",
+      "description": "Co-founded and architected an online IDE platform supporting 60+ programming languages with real-time code execution and sandboxing. Scaled to serve 5 million+ users globally.",
       "highlights": [
         "Designed sandboxed code execution across 60+ languages",
         "Built real-time collaborative editor with low-latency sync",
-        "Scaled infra to 2M+ users globally on AWS + Docker",
+        "Scaled infra to 5M+ users globally on AWS + Docker",
         "Drove product, hiring, and engineering culture from day zero"
       ],
       "metrics": [
-        { "label": "Users", "value": "2M+" },
+        { "label": "Users", "value": "5M+" },
         { "label": "Languages", "value": "60+" },
         { "label": "Uptime", "value": "99.9%" }
       ],
