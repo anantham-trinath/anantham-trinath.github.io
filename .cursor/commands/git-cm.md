@@ -1,0 +1,1 @@
+Your job is to commit all existing changes to current branch directly, and push to remote, always use github CLI. 

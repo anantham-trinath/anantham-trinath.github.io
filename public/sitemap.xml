@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/0.9">
+  <url>
+    <loc>https://anantham-trinath.github.io/</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://anantham-trinath.github.io/image.png</image:loc>
+      <image:title>Trinath Anantham — Senior Engineering Manager &amp; System Architect</image:title>
+      <image:caption>Freelance Engineering Manager, System Architect, and Advisor</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://anantham-trinath.github.io/post/ai-vs-generative-ai/</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://anantham-trinath.github.io/post/microservices-best-practices/</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://anantham-trinath.github.io/resume.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://anantham-trinath.github.io/Trinath.pdf</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>

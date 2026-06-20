@@ -1,0 +1,552 @@
+{
+  "personal": {
+    "name": "Trinath Anantham",
+    "firstName": "Trinath",
+    "title": "Senior Engineering Manager · System Architect",
+    "tagline": "Ex founder, OneCompiler",
+    "bio": "Versatile Engineering Leader with 12+ years of experience across backend, frontend, and cloud-based SaaS platforms. Skilled in building scalable systems, leading full-stack teams, and aligning technology with product strategy. Passionate about mentoring, innovation, and driving end-to-end execution.",
+    "shortBio": "I build scalable platforms, ship developer tools, and lead full-stack teams across SaaS, fintech, and AI.",
+    "yearsExperience": "12+",
+    "currentlyAt": "Go High Level Experts",
+    "availability": "Open For Freelance & Advisory",
+    "available": true,
+    "avatar": "/image.png",
+    "resumeUrl": "/Trinath.pdf",
+    "location": "Hyderabad, India",
+    "timezone": "IST · UTC+5:30",
+    "email": "trinath.anantham@gmail.com",
+    "phone": "+91 954 209 2091",
+    "website": "https://anantham-trinath.github.io"
+  },
+  "socials": {
+    "github": "https://github.com/trinathanantham",
+    "linkedin": "https://www.linkedin.com/in/trinath-anantham-045a19112/",
+    "website": "https://anantham-trinath.github.io",
+    "twitter": "https://twitter.com/trinathanantham"
+  },
+  "stats": [
+    { "label": "Years Engineering", "value": "12", "suffix": "+" },
+    { "label": "Engineers Managed", "value": "30", "suffix": "+" },
+    { "label": "Years Managing", "value": "6", "suffix": "+" },
+    { "label": "Tech Domains", "value": "8", "suffix": "+" }
+  ],
+  "highlights": [
+    "Migrated legacy billing to microservices — deploys hours → minutes",
+    "Built multi-tenant subscription platform for 100K+ users",
+    "Scaled RabbitMQ & Pub/Sub to 2B+ monthly events",
+    "Cut API latency 70% and infra cost 40% via Redis + CDN",
+    "Shipped real-time analytics pipelines processing 100GB+/day",
+    "Standardized CI/CD on Docker, Jenkins, Kubernetes",
+    "Rolled out Prometheus + Grafana + ELK — MTTR down 45%",
+    "Drove $500K+ annual infra savings with product & finance"
+  ],
+  "marquee": [
+    "Engineering Leadership",
+    "System Design",
+    "Distributed Systems",
+    "Developer Tools",
+    "AI Agents",
+    "Multi-Tenant SaaS",
+    "Cloud Native",
+    "Mentoring"
+  ],
+  "navigation": [
+    { "href": "#home", "label": "Home" },
+    { "href": "#open-for", "label": "Hire Me" },
+    { "href": "#projects", "label": "Projects" },
+    { "href": "#tech-stack", "label": "Stack" },
+    { "href": "#education", "label": "Experience" },
+    { "href": "#posts", "label": "Writing" },
+    { "href": "#contact", "label": "Contact" }
+  ],
+  "workExperience": [
+    {
+      "title": "Engineering Manager",
+      "company": "Go High Level Experts",
+      "companyDomain": "gohighlevel.com",
+      "companyLogo": "/logos/gohighlevel.png",
+      "location": "India · Remote",
+      "period": "Oct 2025 — Present",
+      "current": true,
+      "description": "Leading the Workflows Automations Extended Team, Workflows AI Team, and Importer Team. Driving roadmap execution, delivery quality, and AI-driven automation enhancements.",
+      "achievements": [
+        "Leading 3 teams: Workflow Automations, Workflows AI, and Importer",
+        "Owning AI-driven enhancements that boost automation intelligence and UX",
+        "Managing scalable data import pipelines and customer onboarding flows",
+        "Contributing to hiring, architecture decisions, and long-term product direction"
+      ],
+      "stack": ["NestJS", "Node.js", "Vue.js", "MongoDB", "AI Agents", "LangChain", "RAG", "TypeScript"]
+    },
+    {
+      "title": "Senior Engineering Manager",
+      "company": "SaaS Labs",
+      "companyDomain": "saaslabs.co",
+      "companyLogo": "/logos/saaslabs.png",
+      "location": "Hyderabad, India · Remote",
+      "period": "Apr 2025 — Oct 2025",
+      "description": "Promoted to Senior EM. Expanded ownership across Billing, Balance, and Subscriber services. Drove organizational scaling, cross-team alignment, and hiring strategy.",
+      "achievements": [
+        "Led senior engineering decisions across multiple product lines",
+        "Mentored Engineering Managers and tech leads",
+        "Drove cross-functional initiatives across Billing & Balance domains"
+      ],
+      "stack": ["NestJS", "Remix", "React", "GCP", "Kubernetes", "BigQuery"]
+    },
+    {
+      "title": "Engineering Manager",
+      "company": "SaaS Labs",
+      "companyDomain": "saaslabs.co",
+      "companyLogo": "/logos/saaslabs.png",
+      "location": "Hyderabad, India · Remote",
+      "period": "Apr 2023 — Apr 2025",
+      "description": "Led a 12+ member Billing Engineering Team. Architected and developed Billing and Balance microservices from the ground up for scalable, high-availability SaaS products.",
+      "achievements": [
+        "Architected Billing & Balance microservices from ground up",
+        "Drove innovation across billing workflows, payments, and balance management",
+        "Active in performance reviews, hiring, and team growth",
+        "Deployed on GCP with Kubernetes; monitoring via New Relic, Grafana, BigQuery"
+      ],
+      "stack": ["NestJS", "Remix", "React", "Stripe", "MySQL", "GCP", "Kubernetes"]
+    },
+    {
+      "title": "Engineering Manager",
+      "company": "Reputation.com",
+      "companyDomain": "reputation.com",
+      "companyLogo": "/logos/reputation.png",
+      "location": "Hyderabad, India · Remote",
+      "period": "Feb 2022 — Mar 2023",
+      "description": "Architected and built two microservices to integrate third-party APIs. Managed and mentored a 10-member engineering team.",
+      "achievements": [
+        "Architected 2 microservices for third-party API integrations",
+        "Led migration of 200+ customers to new Rep Connector with zero downtime",
+        "Managed and mentored 10-member engineering team",
+        "Drove delivery excellence, code quality, and cross-team collaboration"
+      ],
+      "stack": ["Java", "Spring Boot", "Redis", "MongoDB", "React", "AWS"]
+    },
+    {
+      "title": "Development Team Lead",
+      "company": "Reputation.com",
+      "companyDomain": "reputation.com",
+      "companyLogo": "/logos/reputation.png",
+      "location": "Hyderabad, India",
+      "period": "Jun 2020 — Mar 2022",
+      "description": "Led integration team development. Built and scaled microservices for third-party API integrations across customer platforms.",
+      "achievements": [
+        "Led integration platform engineering",
+        "Mentored engineers and drove technical roadmap",
+        "Owned ELK Stack log aggregation across AWS and GCP"
+      ],
+      "stack": ["Java", "Spring Boot", "MongoDB", "ELK", "AWS", "GCP"]
+    },
+    {
+      "title": "Senior Software Engineer",
+      "company": "Reputation.com",
+      "companyDomain": "reputation.com",
+      "companyLogo": "/logos/reputation.png",
+      "location": "Hyderabad, India",
+      "period": "Apr 2017 — Jun 2020",
+      "description": "Developed scalable microservices using Java, Spring Boot, and MongoDB for third-party API integrations. Built admin tools using React.",
+      "achievements": [
+        "Built scalable integration microservices for enterprise customers",
+        "Developed React-based admin tools and dashboards",
+        "Enhanced partner onboarding and monitoring workflows"
+      ],
+      "stack": ["Java", "Spring Boot", "MongoDB", "React", "ELK", "AWS"]
+    },
+    {
+      "title": "Ex Co-Founder | Founding Engineer",
+      "company": "OneCompiler",
+      "companyDomain": "onecompiler.com",
+      "companyLogo": "/logos/onecompiler.png",
+      "location": "Hyderabad, India · Remote · Self-employed",
+      "period": "Nov 2019 — Feb 2022",
+      "description": "Architected and developed an end-to-end online IDE platform using React, Next.js, React Native, Node.js, MongoDB, and Docker on AWS and Linux.",
+      "achievements": [
+        "Scaled platform to support 2 million+ users globally",
+        "Implemented real-time code execution and sandboxing",
+        "Designed core product functionality from concept to launch",
+        "Launched cross-platform mobile app with Flutter & Dart"
+      ],
+      "stack": ["Next.js", "React", "Node.js", "MongoDB", "Docker", "AWS", "Flutter"]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "SplashBI",
+      "companyDomain": "splashbi.com",
+      "companyLogo": "/logos/splashbi.png",
+      "location": "Hyderabad, India",
+      "period": "2014 — 2017",
+      "description": "Developed enterprise reporting UI using React and Kendo UI components. Built backend services with Java, Spring Boot, Hibernate, and Oracle DB.",
+      "achievements": [
+        "Delivered enterprise reporting solutions",
+        "Built reporting engine with custom query builder",
+        "Worked with Oracle Database and OAF framework"
+      ],
+      "stack": ["React", "Kendo UI", "Java", "Spring Boot", "Oracle"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.Tech, Electronics & Communication Engineering",
+      "institution": "JNTU Kakinada",
+      "year": "2009 — 2013",
+      "description": "Graduated with 76%. Strong foundation in engineering principles, mathematics, and computer science fundamentals."
+    }
+  ],
+  "certifications": [
+    { "title": "Certified Java Programmer (Java SE 7)", "issuer": "Oracle", "year": "2014" },
+    { "title": "MongoDB for Developers", "issuer": "MongoDB University", "year": "2017" },
+    { "title": "Oracle Database SQL Certified Expert", "issuer": "Oracle", "year": "2015" }
+  ],
+  "projects": [
+    {
+      "title": "AI Builder — Agentic Workflows",
+      "company": "Go High Level Experts",
+      "year": "2025",
+      "featured": true,
+      "role": "Engineering Manager",
+      "team": "AI Builder Team",
+      "duration": "Ongoing",
+      "description": "Leading the AI Builder team. Building complex workflows powered by AI agents, chat agents, intent detection, multi-step reasoning, RAG, GraphRAG, and VectorDB-backed retrieval. Enabling no-code AI automation for 1M+ HighLevel users with tool-calling, memory, and guardrails.",
+      "highlights": [
+        "Designed multi-agent orchestration with tool-calling, memory, and human-in-the-loop",
+        "Shipped GraphRAG over knowledge graphs for richer context retrieval",
+        "Built intent detection layer routing 100K+ daily queries to specialized agents",
+        "Established evals + guardrails framework for production AI reliability"
+      ],
+      "metrics": [
+        { "label": "Daily Queries", "value": "100K+" },
+        { "label": "Active Users", "value": "1M+" },
+        { "label": "Agents", "value": "20+" }
+      ],
+      "techStack": ["Node.js", "NestJS", "Vue.js", "OpenAI", "LangChain", "RAG", "GraphRAG", "VectorDB", "MongoDB"]
+    },
+    {
+      "title": "Workflows IATF — Integrations Platform",
+      "company": "Go High Level Experts",
+      "year": "2025",
+      "featured": true,
+      "role": "Engineering Manager",
+      "team": "Workflows IATF Team",
+      "duration": "Ongoing",
+      "description": "Leading the IATF (Integrations Actions/Triggers Framework) team. Built an internal portal to ship 100+ integration apps with 3rd-party actions and triggers across CRM, marketing, payments, and productivity tools. Unified schema, OAuth flows, retries, and observability.",
+      "highlights": [
+        "Internal portal lets non-engineers ship integrations via config",
+        "Unified action/trigger schema across CRM, marketing, payments, and productivity apps",
+        "OAuth, retries, rate-limiting, and webhook fan-out baked in",
+        "Observability stack: structured logs, dashboards, alerts on partner errors"
+      ],
+      "metrics": [
+        { "label": "Integration Apps", "value": "100+" },
+        { "label": "Partners", "value": "50+" },
+        { "label": "Daily Executions", "value": "10M+" }
+      ],
+      "techStack": ["Node.js", "NestJS", "Vue.js", "MongoDB", "OAuth", "Webhooks", "TypeScript"]
+    },
+    {
+      "title": "Importer — External System Sync",
+      "company": "Go High Level Experts",
+      "year": "2025",
+      "role": "Engineering Manager",
+      "team": "Importer Team",
+      "duration": "Ongoing",
+      "description": "Leading the Importer team. Scalable data import pipelines from HubSpot, Make.com, and other external CRM/automation platforms into HighLevel. Schema mapping, deduplication, resumable jobs, and zero-downtime onboarding for enterprise customers.",
+      "highlights": [
+        "Resumable import jobs survive worker restarts and partial failures",
+        "Smart schema mapping + deduplication for messy 3rd-party data",
+        "Connector framework — HubSpot, Make.com, more being added",
+        "Zero-downtime onboarding for enterprise migrations"
+      ],
+      "metrics": [
+        { "label": "Records Imported", "value": "1B+" },
+        { "label": "Source Systems", "value": "10+" },
+        { "label": "Onboarding Time", "value": "−80%" }
+      ],
+      "techStack": ["Node.js", "NestJS", "Vue.js", "MongoDB", "Queues", "HubSpot API", "Make.com"]
+    },
+    {
+      "title": "OneCompiler",
+      "company": "OneCompiler",
+      "year": "Nov 2019",
+      "featured": true,
+      "role": "Co-founder & Architect",
+      "team": "Founding Team",
+      "duration": "2 yrs 4 mos",
+      "description": "Co-founded and architected an online IDE platform supporting 60+ programming languages with real-time code execution and sandboxing. Scaled to serve 2 million+ users globally.",
+      "highlights": [
+        "Designed sandboxed code execution across 60+ languages",
+        "Built real-time collaborative editor with low-latency sync",
+        "Scaled infra to 2M+ users globally on AWS + Docker",
+        "Drove product, hiring, and engineering culture from day zero"
+      ],
+      "metrics": [
+        { "label": "Users", "value": "2M+" },
+        { "label": "Languages", "value": "60+" },
+        { "label": "Uptime", "value": "99.9%" }
+      ],
+      "techStack": ["React", "Next.js", "Node.js", "MongoDB", "Docker", "AWS"],
+      "githubUrl": "https://github.com/onecompiler",
+      "demoUrl": "https://onecompiler.com"
+    },
+    {
+      "title": "OneCompiler Mobile",
+      "company": "OneCompiler",
+      "year": "2020",
+      "featured": true,
+      "role": "Co-founder & Mobile Lead",
+      "team": "Founding Team",
+      "duration": "1 yr",
+      "description": "Launched the OneCompiler mobile app using Flutter and Dart. Same powerful IDE features as the web platform, optimized for mobile with touch-friendly UI and offline capabilities.",
+      "highlights": [
+        "Ported full IDE experience to Flutter for Android + iOS",
+        "Touch-optimized code editor with custom keyboard and gestures",
+        "Offline mode for code editing without active connection",
+        "Single codebase shipping to both Play Store and App Store"
+      ],
+      "metrics": [
+        { "label": "Downloads", "value": "500K+" },
+        { "label": "Rating", "value": "4.5★" },
+        { "label": "Platforms", "value": "2" }
+      ],
+      "techStack": ["Flutter", "Dart", "Android", "iOS"],
+      "demoUrl": "https://play.google.com/store/apps/details?id=com.onecompiler&hl=en_IN&pli=1"
+    },
+    {
+      "title": "Billing Service",
+      "company": "SaaS Labs",
+      "year": "2023",
+      "featured": true,
+      "role": "Engineering Manager",
+      "team": "12+ engineers",
+      "duration": "2 yrs",
+      "description": "Built and led the development of an automated billing service from scratch. Stripe integration, NestJS backend, React/Remix frontend, MySQL, BigQuery analytics, Grafana monitoring.",
+      "highlights": [
+        "Architected billing service from ground up for SaaS multi-tenant scale",
+        "Stripe integration with retry, dunning, and proration logic",
+        "Real-time analytics pipeline via BigQuery + Grafana",
+        "Hired and grew the team from 4 to 12+ engineers"
+      ],
+      "metrics": [
+        { "label": "Team Size", "value": "12+" },
+        { "label": "Customers", "value": "3K+" },
+        { "label": "Revenue Processed", "value": "$M+" }
+      ],
+      "techStack": ["NestJS", "MySQL", "Remix", "Stripe", "BigQuery", "GCP", "Kubernetes"]
+    },
+    {
+      "title": "Balance Service",
+      "company": "SaaS Labs",
+      "year": "2023",
+      "role": "Engineering Manager",
+      "team": "Billing Engineering",
+      "duration": "1.5 yrs",
+      "description": "Architected a balance service for deducting calls, SMS, transactions, and other services. Stripe integration, real-time analytics via BigQuery, Grafana dashboards.",
+      "highlights": [
+        "Real-time balance deduction for calls, SMS, and transactional events",
+        "Idempotent deduction engine with reconciliation guarantees",
+        "Top-up flows via Stripe with automated low-balance alerts",
+        "BigQuery-backed analytics for usage forecasting"
+      ],
+      "metrics": [
+        { "label": "Events/Day", "value": "5M+" },
+        { "label": "Latency p99", "value": "<100ms" },
+        { "label": "Accuracy", "value": "99.99%" }
+      ],
+      "techStack": ["NestJS", "MySQL", "Remix", "Stripe", "BigQuery", "GCP"]
+    },
+    {
+      "title": "Integration Service",
+      "company": "Reputation.com",
+      "year": "2018",
+      "role": "Senior Engineer → Tech Lead",
+      "team": "Integrations Team",
+      "duration": "3 yrs",
+      "description": "Built customer integration services using scalable microservices for third-party API integrations. ELK Stack log aggregation across AWS and GCP.",
+      "highlights": [
+        "Built scalable microservices for 3rd-party API integrations",
+        "ELK Stack log aggregation across AWS + GCP",
+        "Admin tools in React for partner onboarding and monitoring",
+        "Hardened auth, retries, and rate-limiting for partner APIs"
+      ],
+      "metrics": [
+        { "label": "Customers", "value": "200+" },
+        { "label": "Partners", "value": "30+" },
+        { "label": "Uptime", "value": "99.95%" }
+      ],
+      "techStack": ["Java", "Spring Boot", "MongoDB", "React", "ELK", "AWS"]
+    },
+    {
+      "title": "Business Listing Scraper",
+      "company": "Reputation.com",
+      "year": "2019",
+      "role": "Tech Lead",
+      "team": "Listings Engineering",
+      "duration": "1.5 yrs",
+      "description": "Automated business listing scraper handling millions of scraping jobs at scale across AWS and GCP with comprehensive monitoring.",
+      "highlights": [
+        "Distributed scraper handling millions of jobs daily",
+        "Adaptive rate-limiting + proxy rotation to avoid blocks",
+        "Job orchestration with retries, dead-letter queues, and audit trail",
+        "Monitoring dashboards for partner SLAs"
+      ],
+      "metrics": [
+        { "label": "Jobs/Day", "value": "5M+" },
+        { "label": "Success Rate", "value": "98%" },
+        { "label": "Listings", "value": "10M+" }
+      ],
+      "techStack": ["Java", "Spring Boot", "MongoDB", "AWS", "GCP"]
+    },
+    {
+      "title": "Reporting Dashboards",
+      "company": "SplashBI",
+      "year": "2016",
+      "role": "Software Engineer",
+      "team": "Reporting Frontend",
+      "duration": "1.5 yrs",
+      "description": "Enterprise reporting dashboards built with React + Kendo UI. Interactive data visualization, real-time reporting, custom charts.",
+      "highlights": [
+        "Interactive enterprise dashboards with drag-and-drop widgets",
+        "Real-time reporting via WebSockets + Oracle DB",
+        "Custom chart components on top of Kendo UI",
+        "Responsive layouts for desktop and tablet"
+      ],
+      "metrics": [
+        { "label": "Dashboards", "value": "50+" },
+        { "label": "Widgets", "value": "30+" },
+        { "label": "Enterprise Users", "value": "10K+" }
+      ],
+      "techStack": ["React", "Kendo UI", "Java", "Spring Boot", "Oracle"]
+    },
+    {
+      "title": "Reporting Engine",
+      "company": "SplashBI",
+      "year": "2015",
+      "role": "Software Engineer",
+      "team": "Reporting Backend",
+      "duration": "1.5 yrs",
+      "description": "Comprehensive reporting engine to build any reporting query easily. Java + Spring Boot + Hibernate + Oracle DB with OAF framework.",
+      "highlights": [
+        "Visual query builder generating optimized SQL",
+        "Reusable report templates with parameterized inputs",
+        "Hibernate + Oracle for cross-schema joins",
+        "Export to PDF, Excel, and CSV"
+      ],
+      "metrics": [
+        { "label": "Reports Built", "value": "1K+" },
+        { "label": "Data Sources", "value": "5+" },
+        { "label": "Avg Query", "value": "<2s" }
+      ],
+      "techStack": ["React", "Kendo UI", "Java", "Hibernate", "Oracle"]
+    },
+    {
+      "title": "Enterprise BI Solutions",
+      "company": "EIS Technologies",
+      "year": "2014",
+      "role": "BI Engineer",
+      "team": "Oracle BI Practice",
+      "duration": "~1 yr",
+      "description": "Enterprise analytics and reporting solutions using Oracle BI Publisher and OBIEE. Data modeling, performance tuning, and Oracle EBS reporting.",
+      "highlights": [
+        "Built data models on Oracle EBS for enterprise reporting",
+        "Optimized OBIEE dashboards and PL/SQL stored procedures",
+        "ODI pipelines for cross-source ETL",
+        "Custom BI Publisher templates for financial reports"
+      ],
+      "metrics": [
+        { "label": "Reports", "value": "100+" },
+        { "label": "Clients", "value": "10+" },
+        { "label": "Query Speedup", "value": "5×" }
+      ],
+      "techStack": ["Oracle EBS", "OBIEE", "BI Publisher", "PL/SQL", "ODI"]
+    }
+  ],
+  "techStacks": [
+    {
+      "category": "Backend",
+      "icon": "Code",
+      "technologies": ["Java", "Spring Boot", "Node.js", "NestJS", "Express.js", "GraphQL", "REST APIs", "Groovy"]
+    },
+    {
+      "category": "Frontend",
+      "icon": "Layers",
+      "technologies": ["React", "Next.js", "Vue.js", "Remix", "Redux", "Tailwind CSS", "React Native", "Electron"]
+    },
+    {
+      "category": "Databases",
+      "icon": "Database",
+      "technologies": ["MongoDB", "PostgreSQL", "MySQL", "Oracle", "Redis", "BigQuery", "RabbitMQ", "Pub/Sub"]
+    },
+    {
+      "category": "Cloud & DevOps",
+      "icon": "Cloud",
+      "technologies": ["AWS", "GCP", "Docker", "Kubernetes", "Jenkins", "GitHub Actions", "Terraform", "PM2"]
+    },
+    {
+      "category": "AI & Agents",
+      "icon": "Cog",
+      "technologies": ["LangChain", "Mastra", "OpenAI", "Prompt Engineering", "AI Agents", "Chat Agents", "Intent Detection", "RAG", "GraphRAG", "VectorDB"]
+    },
+    {
+      "category": "Architecture",
+      "icon": "Monitor",
+      "technologies": ["System Design", "Microservices", "Event-Driven", "Multi-Tenancy", "Performance Tuning", "Scalability"]
+    },
+    {
+      "category": "Observability",
+      "icon": "Monitor",
+      "technologies": ["ELK Stack", "Prometheus", "Grafana", "New Relic", "BigQuery", "Postman", "Swagger"]
+    },
+    {
+      "category": "Leadership",
+      "icon": "Cog",
+      "technologies": ["Agile · Scrum", "OKRs", "Hiring", "Mentoring", "Code Reviews", "TDD"]
+    }
+  ],
+  "posts": [
+    { "name": "ai-vs-generative-ai", "path": "/posts/ai-vs-generative-ai.md" },
+    { "name": "microservices-best-practices", "path": "/posts/microservices-best-practices.md" }
+  ],
+  "openFor": [
+    {
+      "icon": "Briefcase",
+      "title": "Contract & Freelance Engagements",
+      "description": "Short or long-term contract work — backend, full-stack, or end-to-end product delivery."
+    },
+    {
+      "icon": "LayoutGrid",
+      "title": "Architecture & System Design Reviews",
+      "description": "Independent review of system architecture, service boundaries, data flows, and tech choices."
+    },
+    {
+      "icon": "TrendingUp",
+      "title": "Scalability & Performance Consulting",
+      "description": "Diagnose bottlenecks across services, queues, and databases. Plan to scale 10× without rewrites."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Technical Due Diligence",
+      "description": "For investors and acquirers — codebase, architecture, team, and roadmap assessment."
+    },
+    {
+      "icon": "Compass",
+      "title": "Fractional CTO / Engineering Advisory",
+      "description": "Ongoing engineering leadership for startups — roadmap, hiring, process, and tech direction."
+    },
+    {
+      "icon": "Sparkles",
+      "title": "AI & Agentic Workflow Design",
+      "description": "Design and ship LangChain, RAG, GraphRAG, and multi-agent systems with guardrails and evals."
+    },
+    {
+      "icon": "Network",
+      "title": "Distributed Systems Audits",
+      "description": "Audit reliability, idempotency, event-flow, and observability across distributed services."
+    },
+    {
+      "icon": "Users",
+      "title": "Team Scaling & Hiring Guidance",
+      "description": "Hiring loops, interview design, IC ladder, mentorship frameworks, and org structure."
+    }
+  ]
+}

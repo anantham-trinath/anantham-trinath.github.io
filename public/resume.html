@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Trinath Anantham — Resume</title>
+<style>
+  @page { size: A4; margin: 12mm 14mm 12mm 14mm; }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #1b1b1b;
+    font-size: 9.3pt;
+    line-height: 1.4;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  a { color: #0a6c52; text-decoration: none; }
+  h1, h2, h3 { margin: 0; font-weight: 700; color: #0c2f24; }
+  h1 { font-size: 22pt; letter-spacing: -0.4pt; line-height: 1.05; }
+  h2 {
+    font-size: 10pt;
+    text-transform: uppercase;
+    letter-spacing: 1.6pt;
+    color: #0a6c52;
+    border-bottom: 1.2px solid #0a6c52;
+    padding-bottom: 2pt;
+    margin: 11pt 0 6pt 0;
+  }
+  h3 { font-size: 10pt; }
+
+  /* HEADER */
+  .header {
+    display: flex;
+    gap: 14pt;
+    align-items: center;
+    padding-bottom: 8pt;
+    border-bottom: 2.4px solid #0c2f24;
+  }
+  .avatar {
+    width: 78pt;
+    height: 78pt;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2pt solid #0a6c52;
+    flex-shrink: 0;
+    background: #eaf6f1;
+  }
+  .id { flex: 1; }
+  .id .title { color: #444; font-size: 10.3pt; margin-top: 2pt; font-weight: 500; }
+  .id .tagline { color: #0a6c52; font-style: italic; font-size: 9.2pt; margin-top: 1pt; }
+  .contact {
+    font-size: 8.6pt;
+    color: #222;
+    flex-shrink: 0;
+    min-width: 180pt;
+    background: #f4faf7;
+    border: 1px solid #d3e5dd;
+    border-radius: 6pt;
+    padding: 8pt 10pt;
+  }
+  .contact .row {
+    display: flex;
+    align-items: center;
+    gap: 6pt;
+    padding: 1.6pt 0;
+  }
+  .contact .row + .row { border-top: 1px solid #e3efe9; }
+  .contact .ic {
+    width: 11pt;
+    height: 11pt;
+    display: inline-block;
+    flex-shrink: 0;
+    color: #0a6c52;
+  }
+  .contact .row span, .contact .row a { white-space: nowrap; }
+  .contact a { color: #0c2f24; }
+
+  /* ABOUT */
+  .about { margin-top: 7pt; }
+  .about p { margin: 0 0 4pt 0; color: #222; }
+  .about .lead { font-size: 9.5pt; }
+  .bullets {
+    margin: 4pt 0 0 0;
+    padding: 0;
+    list-style: none;
+    columns: 2;
+    column-gap: 14pt;
+  }
+  .bullets li {
+    break-inside: avoid;
+    padding-left: 11pt;
+    position: relative;
+    margin: 2pt 0;
+    font-size: 8.7pt;
+    color: #2a2a2a;
+  }
+  .bullets li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    color: #0a6c52;
+    font-size: 7pt;
+    top: 1.5pt;
+  }
+  .bullets li b { color: #0c2f24; }
+
+  /* STATS */
+  .stats {
+    display: flex;
+    gap: 10pt;
+    margin-top: 8pt;
+    padding: 6pt 0;
+    border-top: 1px dashed #c4d8d0;
+    border-bottom: 1px dashed #c4d8d0;
+  }
+  .stat { flex: 1; text-align: center; }
+  .stat .v { font-size: 14pt; font-weight: 700; color: #0a6c52; }
+  .stat .l { font-size: 7.5pt; color: #555; text-transform: uppercase; letter-spacing: 0.8pt; margin-top: 1pt; }
+
+  /* CORE */
+  .core {
+    margin-top: 2pt;
+    font-size: 8.6pt;
+    color: #333;
+  }
+  .core .pill {
+    display: inline-block;
+    background: #eaf6f1;
+    color: #0a6c52;
+    padding: 1.5pt 6pt;
+    border-radius: 8pt;
+    font-size: 7.8pt;
+    margin: 1.5pt 3pt 1.5pt 0;
+    font-weight: 600;
+  }
+
+  /* WORK */
+  .company-group {
+    page-break-inside: avoid;
+    margin-bottom: 7pt;
+    border-left: 2pt solid #0a6c52;
+    padding-left: 8pt;
+  }
+  .company-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2pt;
+    gap: 6pt;
+  }
+  .company-left { display: flex; align-items: center; gap: 7pt; }
+  .company-logo {
+    width: 16pt;
+    height: 16pt;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 3pt;
+    background: #fff;
+  }
+  .company-name { font-weight: 700; font-size: 11pt; color: #0c2f24; }
+  .company-loc { color: #666; font-size: 8.4pt; }
+  .role {
+    margin: 3pt 0 4pt 0;
+  }
+  .role-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .role-title { font-weight: 600; color: #1b1b1b; font-size: 9.4pt; }
+  .role-period { color: #666; font-size: 8.4pt; font-style: italic; }
+  .role-desc { margin: 1pt 0; color: #333; font-size: 8.8pt; }
+  ul.achieve { margin: 1pt 0 1pt 14pt; padding: 0; }
+  ul.achieve li { margin: 0.5pt 0; font-size: 8.7pt; color: #2a2a2a; }
+  .stack {
+    margin-top: 2pt;
+    font-size: 8.2pt;
+    color: #555;
+  }
+  .stack b { color: #0c2f24; }
+
+  /* TECH */
+  .tech-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3pt 14pt;
+    font-size: 8.6pt;
+  }
+  .tech-grid div b { color: #0c2f24; }
+
+  /* MISC */
+  .small { font-size: 8.5pt; color: #2a2a2a; }
+  .page-break { page-break-after: always; }
+
+  /* OPEN FOR */
+  .open-for {
+    margin-top: 7pt;
+    border: 1px solid #d3e5dd;
+    background: linear-gradient(90deg, #f4faf7 0%, #ffffff 100%);
+    border-left: 3pt solid #0a6c52;
+    border-radius: 4pt;
+    padding: 5pt 9pt;
+    display: flex;
+    gap: 8pt;
+    align-items: flex-start;
+  }
+  .open-for .label {
+    font-weight: 700;
+    color: #0a6c52;
+    text-transform: uppercase;
+    letter-spacing: 1.2pt;
+    font-size: 8pt;
+    white-space: nowrap;
+    padding-top: 1pt;
+  }
+  .open-for .items {
+    font-size: 8.6pt;
+    color: #2a2a2a;
+    line-height: 1.5;
+  }
+  .open-for .items b { color: #0c2f24; }
+  .open-for .items .sep { color: #0a6c52; margin: 0 4pt; font-weight: 700; }
+
+  /* EDU + CERTS */
+  .edu-certs {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 14pt;
+    margin-top: 4pt;
+  }
+  .edu-block .deg { font-weight: 700; color: #0c2f24; font-size: 9.4pt; }
+  .edu-block .inst { font-size: 8.7pt; color: #333; margin-top: 1pt; }
+  .edu-block .meta { font-size: 8.4pt; color: #666; font-style: italic; margin-top: 1pt; }
+  .cert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3pt;
+  }
+  .cert {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4pt 8pt;
+    background: #f4faf7;
+    border-left: 2pt solid #0a6c52;
+    border-radius: 0 4pt 4pt 0;
+  }
+  .cert .name { font-weight: 600; color: #0c2f24; font-size: 8.7pt; }
+  .cert .iss { font-size: 8pt; color: #555; }
+  .cert .yr {
+    font-size: 8.2pt;
+    font-weight: 700;
+    color: #0a6c52;
+    background: #ffffff;
+    border: 1px solid #d3e5dd;
+    padding: 1.5pt 5pt;
+    border-radius: 10pt;
+    flex-shrink: 0;
+    margin-left: 8pt;
+  }
+</style>
+</head>
+<body>
+
+<!-- =========== PAGE 1 =========== -->
+<div class="header">
+  <img class="avatar" src="file:///Users/trinath/Documents/Github/trinath-profile/public/image.png" alt="Trinath Anantham" />
+  <div class="id">
+    <h1>Trinath Anantham</h1>
+    <div class="title">Senior Engineering Manager · System Architect</div>
+    <div class="tagline">Ex founder, OneCompiler · 1,200+ followers</div>
+  </div>
+  <div class="contact">
+    <div class="row">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+      <span>trinath.anantham@gmail.com</span>
+    </div>
+    <div class="row">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92V21a1 1 0 0 1-1.1 1 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 3.2 4.1 1 1 0 0 1 4.18 3h4.1a1 1 0 0 1 1 .75 12.8 12.8 0 0 0 .7 2.81 1 1 0 0 1-.23 1.05L8.1 9.2a16 16 0 0 0 6 6l1.59-1.6a1 1 0 0 1 1.05-.23 12.8 12.8 0 0 0 2.81.7 1 1 0 0 1 .75 1z"/></svg>
+      <span>+91 954 209 2091</span>
+    </div>
+    <div class="row">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-7.6 7-13a7 7 0 1 0-14 0c0 5.4 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      <span>Hyderabad, India · IST UTC+5:30</span>
+    </div>
+    <div class="row">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+      <a href="https://anantham-trinath.github.io">anantham-trinath.github.io</a>
+    </div>
+    <div class="row">
+      <svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.59.69.49A10 10 0 0 0 12 2z"/></svg>
+      <a href="https://github.com/trinathanantham">github.com/trinathanantham</a>
+    </div>
+    <div class="row">
+      <svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56V22H.22V8zm7.66 0h4.37v1.92h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.47 3.04 5.47 6.99V22h-4.56v-6.18c0-1.47-.03-3.37-2.06-3.37-2.06 0-2.38 1.6-2.38 3.26V22H7.88V8z"/></svg>
+      <a href="https://www.linkedin.com/in/trinath-anantham-045a19112/">linkedin/trinath-anantham</a>
+    </div>
+  </div>
+</div>
+
+<h2>About Me</h2>
+<div class="about">
+  <p class="lead">
+    Tech enthusiast and avid learner with <b>12+ years</b> in web, SaaS, and system design.
+    Skilled at solving complex problems, leading by example, and driving scalable solutions across engineering teams.
+    Currently leading Workflows, AI &amp; Importer teams at Go High Level Experts.
+  </p>
+  <ul class="bullets">
+    <li>Migrated legacy billing to microservices, <b>cutting deployment time from hours to minutes</b>.</li>
+    <li>Designed multi-tenant subscription system for <b>100K+ users</b> with automated billing &amp; recovery.</li>
+    <li>Scaled RabbitMQ &amp; Pub/Sub infra to <b>2B+ monthly events</b> with guaranteed reliability.</li>
+    <li>Optimized APIs with Redis + CDN, <b>reducing response time by 70%</b> and infra cost by 40%.</li>
+    <li>Built real-time analytics pipelines processing <b>100GB+ data daily</b>.</li>
+    <li>Automated CI/CD with Docker, Jenkins, Kubernetes — enabling <b>daily releases</b>.</li>
+    <li>Designed high-availability billing ledger ensuring <b>ACID compliance</b>.</li>
+    <li>Defined observability stack (Prometheus, Grafana, ELK) improving <b>MTTR by 45%</b>.</li>
+    <li>Partnered with product &amp; finance, saving <b>$500K+ annually</b> through infra optimization.</li>
+    <li>Co-founded <b>OneCompiler</b> — online IDE scaled to <b>2M+ users</b> across 60+ languages.</li>
+    <li>Shipped <b>AI agentic workflows</b> (LangChain, RAG, GraphRAG) for 1M+ HighLevel users.</li>
+    <li>Hired and grew the Billing Engineering team from <b>4 to 12+ engineers</b>.</li>
+  </ul>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="v">12+</div><div class="l">Years Engineering</div></div>
+  <div class="stat"><div class="v">30+</div><div class="l">Engineers Managed</div></div>
+  <div class="stat"><div class="v">6+</div><div class="l">Years Managing</div></div>
+  <div class="stat"><div class="v">8+</div><div class="l">Tech Domains</div></div>
+</div>
+
+<h2>Core Strengths</h2>
+<div class="core">
+  <span class="pill">Engineering Leadership</span>
+  <span class="pill">System Design</span>
+  <span class="pill">Distributed Systems</span>
+  <span class="pill">Multi-Tenant SaaS</span>
+  <span class="pill">Developer Tools</span>
+  <span class="pill">AI Agents</span>
+  <span class="pill">Cloud Native</span>
+  <span class="pill">Mentoring &amp; Hiring</span>
+  <span class="pill">Roadmap &amp; Delivery</span>
+</div>
+
+<h2>Work Experience</h2>
+
+<div class="company-group">
+  <div class="company-head">
+    <div class="company-left">
+      <img class="company-logo" src="file:///Users/trinath/Documents/Github/trinath-profile/public/logos/gohighlevel.png" alt="" />
+      <div class="company-name">Go High Level Experts</div>
+    </div>
+    <div class="company-loc">India · Remote</div>
+  </div>
+  <div class="role">
+    <div class="role-head">
+      <div class="role-title">Engineering Manager — Workflows, AI &amp; Importer</div>
+      <div class="role-period">Oct 2025 — Present</div>
+    </div>
+    <div class="role-desc">Leading three teams driving roadmap, delivery quality, and AI-driven automation enhancements for 1M+ HighLevel users.</div>
+    <ul class="achieve">
+      <li>Own AI-driven enhancements boosting automation intelligence and UX.</li>
+      <li>Architect resumable data import pipelines for enterprise onboarding.</li>
+      <li>Contribute to hiring, architecture decisions, and long-term product direction.</li>
+    </ul>
+    <div class="stack"><b>Stack:</b> NestJS, Node.js, Vue.js, MongoDB, LangChain, RAG, TypeScript</div>
+  </div>
+</div>
+
+<div class="company-group">
+  <div class="company-head">
+    <div class="company-left">
+      <img class="company-logo" src="file:///Users/trinath/Documents/Github/trinath-profile/public/logos/saaslabs.png" alt="" />
+      <div class="company-name">SaaS Labs</div>
+    </div>
+    <div class="company-loc">Hyderabad · Remote</div>
+  </div>
+  <div class="role">
+    <div class="role-head">
+      <div class="role-title">Senior Engineering Manager — Billing, Balance &amp; Subscriber</div>
+      <div class="role-period">Apr 2025 — Oct 2025</div>
+    </div>
+    <div class="role-desc">Promoted to Senior EM. Expanded ownership across multiple product lines. Drove organizational scaling and hiring strategy.</div>
+  </div>
+  <div class="role">
+    <div class="role-head">
+      <div class="role-title">Engineering Manager — Billing Engineering</div>
+      <div class="role-period">Apr 2023 — Apr 2025</div>
+    </div>
+    <div class="role-desc">Led 12+ member team. Architected Billing &amp; Balance microservices from ground up.</div>
+    <ul class="achieve">
+      <li>Stripe integration with retry, dunning, and proration; real-time analytics via BigQuery + Grafana.</li>
+      <li>Deployed on GCP with Kubernetes; monitoring via New Relic &amp; Grafana.</li>
+      <li>Grew team from 4 to 12+ engineers via hiring &amp; mentorship.</li>
+    </ul>
+    <div class="stack"><b>Stack:</b> NestJS, Remix, React, Stripe, MySQL, GCP, Kubernetes, BigQuery</div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- =========== PAGE 2 =========== -->
+
+<div class="company-group">
+  <div class="company-head">
+    <div class="company-left">
+      <img class="company-logo" src="file:///Users/trinath/Documents/Github/trinath-profile/public/logos/reputation.png" alt="" />
+      <div class="company-name">Reputation.com</div>
+    </div>
+    <div class="company-loc">Hyderabad · Remote · 6 years</div>
+  </div>
+  <div class="role">
+    <div class="role-head">
+      <div class="role-title">Engineering Manager — Integrations</div>
+      <div class="role-period">Feb 2022 — Mar 2023</div>
+    </div>
+    <div class="role-desc">Architected and built two microservices for third-party API integrations. Managed and mentored a 10-member engineering team.</div>
+    <ul class="achieve">
+      <li>Led migration of 200+ customers to new Rep Connector with zero downtime.</li>
+      <li>Drove delivery excellence, code quality, and cross-team collaboration.</li>
+    </ul>
+  </div>
+  <div class="role">
+    <div class="role-head">
+      <div class="role-title">Development Team Lead — Integrations</div>
+      <div class="role-period">Jun 2020 — Mar 2022</div>
+    </div>
+    <div class="role-desc">Led integration team development. Built and scaled microservices for third-party API integrations. Owned ELK Stack log aggregation across AWS and GCP.</div>
+  </div>
+  <div class="role">
+    <div class="role-head">
+      <div class="role-title">Senior Software Engineer</div>
+      <div class="role-period">Apr 2017 — Jun 2020</div>
+    </div>
+    <div class="role-desc">Built scalable microservices using Java, Spring Boot, and MongoDB. Developed React-based admin tools and dashboards for partner onboarding.</div>
+    <div class="stack"><b>Stack:</b> Java, Spring Boot, Redis, MongoDB, React, ELK, AWS, GCP</div>
+  </div>
+</div>
+
+<div class="company-group">
+  <div class="company-head">
+    <div class="company-left">
+      <img class="company-logo" src="file:///Users/trinath/Documents/Github/trinath-profile/public/logos/onecompiler.png" alt="" />
+      <div class="company-name">OneCompiler</div>
+    </div>
+    <div class="company-loc">Self-employed · Remote</div>
+  </div>
+  <div class="role">
+    <div class="role-head">
+      <div class="role-title">Co-Founder &amp; Founding Engineer</div>
+      <div class="role-period">Nov 2019 — Feb 2022</div>
+    </div>
+    <div class="role-desc">Architected and developed an end-to-end online IDE platform. Drove product, hiring, and engineering culture from day zero.</div>
+    <ul class="achieve">
+      <li>Scaled platform to <b>2M+ users globally</b>; designed sandboxed code execution for 60+ languages.</li>
+      <li>Built real-time collaborative editor with low-latency sync.</li>
+      <li>Launched cross-platform mobile app (Flutter &amp; Dart) — 500K+ downloads, 4.5★.</li>
+      <li>Maintained 99.9% uptime on AWS + Docker.</li>
+    </ul>
+    <div class="stack"><b>Stack:</b> Next.js, React, Node.js, MongoDB, Docker, AWS, Flutter</div>
+  </div>
+</div>
+
+<div class="company-group">
+  <div class="company-head">
+    <div class="company-left">
+      <img class="company-logo" src="file:///Users/trinath/Documents/Github/trinath-profile/public/logos/splashbi.png" alt="" />
+      <div class="company-name">SplashBI</div>
+    </div>
+    <div class="company-loc">Hyderabad · 3 years</div>
+  </div>
+  <div class="role">
+    <div class="role-head">
+      <div class="role-title">Software Engineer — Reporting Platform</div>
+      <div class="role-period">2014 — 2017</div>
+    </div>
+    <div class="role-desc">Developed enterprise reporting UI using React + Kendo UI. Built reporting engine with Java, Spring Boot, Hibernate, Oracle DB and OAF framework.</div>
+    <div class="stack"><b>Stack:</b> React, Kendo UI, Java, Spring Boot, Hibernate, Oracle</div>
+  </div>
+</div>
+
+<h2>Tech Stack</h2>
+<div class="tech-grid">
+  <div><b>Backend:</b> Java, Spring Boot, Node.js, NestJS, Express, GraphQL, REST</div>
+  <div><b>Frontend:</b> React, Next.js, Vue.js, Remix, Redux, Tailwind, React Native</div>
+  <div><b>Databases:</b> MongoDB, PostgreSQL, MySQL, Oracle, Redis, BigQuery</div>
+  <div><b>Cloud &amp; DevOps:</b> AWS, GCP, Docker, Kubernetes, Jenkins, GitHub Actions, Terraform</div>
+  <div><b>AI &amp; Agents:</b> LangChain, OpenAI, RAG, GraphRAG, VectorDB, Prompt Engineering</div>
+  <div><b>Architecture:</b> Microservices, Event-Driven, Multi-Tenancy, Performance Tuning</div>
+  <div><b>Observability:</b> ELK, Prometheus, Grafana, New Relic, BigQuery</div>
+  <div><b>Leadership:</b> Agile · Scrum, OKRs, Hiring, Mentoring, Code Reviews, TDD</div>
+</div>
+
+<h2>Education &amp; Certifications</h2>
+<div class="edu-certs">
+  <div class="edu-block">
+    <div class="deg">B.Tech — Electronics &amp; Communication Engineering</div>
+    <div class="inst">JNTU Kakinada</div>
+    <div class="meta">2009 — 2013 · Graduated 76%</div>
+  </div>
+  <div class="cert-list">
+    <div class="cert">
+      <div>
+        <div class="name">Certified Java Programmer — Java SE 7</div>
+        <div class="iss">Oracle</div>
+      </div>
+      <div class="yr">2014</div>
+    </div>
+    <div class="cert">
+      <div>
+        <div class="name">Oracle Database SQL Certified Expert</div>
+        <div class="iss">Oracle</div>
+      </div>
+      <div class="yr">2015</div>
+    </div>
+    <div class="cert">
+      <div>
+        <div class="name">MongoDB for Developers</div>
+        <div class="iss">MongoDB University</div>
+      </div>
+      <div class="yr">2017</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
