@@ -11,6 +11,7 @@
     "generate": "vite build && node scripts/prerender.mjs",
     "resume:pdf": "node scripts/resume-pdf.mjs",
     "lint": "eslint .",
+    "teaching:index": "node scripts/teaching-index.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

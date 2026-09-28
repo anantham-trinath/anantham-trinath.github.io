@@ -4,6 +4,7 @@ import OpenForSection from "@/components/OpenForSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import TechStackSection from "@/components/TechStackSection";
 import EducationSection from "@/components/EducationSection";
+import TeachingSection from "@/components/TeachingSection";
 import PostsSection from "@/components/PostsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -18,6 +19,7 @@ const Index = () => {
         <ProjectsSection />
         <TechStackSection />
         <EducationSection />
+        <TeachingSection />
         <PostsSection />
         <ContactSection />
       </main>

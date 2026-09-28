@@ -10,6 +10,7 @@ import { existsSync } from "node:fs";
 import { extname, join, resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import puppeteer from "puppeteer";
+import { buildTeachingIndex } from "./teaching-index.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
@@ -61,12 +62,13 @@ const extractDate = (md) => {
 };
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
-// Rewrite the snapshot <head> with post-specific SEO.
-function injectPostSeo(html, { title, summary, date, tags, url }) {
+// Rewrite the snapshot <head> with page-specific SEO.
+// schemaType: "BlogPosting" for posts, "LearningResource" / "Course" for teaching pages.
+function injectPostSeo(html, { title, summary, date, tags, url, schemaType = "BlogPosting", ogType = "article" }) {
   const fullTitle = `${title} — Trinath Anantham`;
   const ld = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
+    "@type": schemaType,
     headline: title,
     description: summary,
     datePublished: date,
@@ -84,7 +86,7 @@ function injectPostSeo(html, { title, summary, date, tags, url }) {
   out = out.replace(/(<meta property="og:title" content=")[\s\S]*?(")/i, `$1${esc(fullTitle)}$2`);
   out = out.replace(/(<meta property="og:description" content=")[\s\S]*?(")/i, `$1${esc(summary)}$2`);
   out = out.replace(/(<meta property="og:url" content=")[\s\S]*?(")/i, `$1${url}$2`);
-  out = out.replace(/(<meta property="og:type" content=")[\s\S]*?(")/i, `$1article$2`);
+  out = out.replace(/(<meta property="og:type" content=")[\s\S]*?(")/i, `$1${ogType}$2`);
   out = out.replace(/(<meta name="twitter:title" content=")[\s\S]*?(")/i, `$1${esc(fullTitle)}$2`);
   out = out.replace(/(<meta name="twitter:description" content=")[\s\S]*?(")/i, `$1${esc(summary)}$2`);
   out = out.replace(/(<link rel="canonical" href=")[\s\S]*?(")/i, `$1${url}$2`);
@@ -134,6 +136,77 @@ async function writePage(relPath, html) {
   console.log(`  ✓ ${relPath}  (${(html.length / 1024).toFixed(1)} kB)`);
 }
 
+const TODAY = new Date().toISOString().split("T")[0];
+
+async function prerenderTeaching(page) {
+  const index = await buildTeachingIndex({ quiet: true });
+  const courses = index?.courses ?? [];
+  if (!courses.length) return [];
+  const urls = [];
+
+  const hubUrl = `${SITE}/teaching/`;
+  let html = await snapshot(page, "/teaching", `a[href^="/teaching/"]`);
+  html = injectPostSeo(html, {
+    title: "Teaching",
+    summary: `Lecture notes by Trinath Anantham on ${courses.map((c) => c.title).join(", ")}.`,
+    date: courses.map((c) => c.updated).filter(Boolean).sort().pop() ?? TODAY,
+    tags: courses.map((c) => c.title),
+    url: hubUrl,
+    schemaType: "CollectionPage",
+    ogType: "website",
+  });
+  await writePage(join("teaching", "index.html"), html);
+  urls.push({ loc: hubUrl, priority: "0.8" });
+
+  for (const course of courses) {
+    const courseUrl = `${SITE}/teaching/${course.slug}/`;
+    html = await snapshot(page, `/teaching/${course.slug}`, "h1");
+    html = injectPostSeo(html, {
+      title: course.title,
+      summary: course.description || `${course.lectures.length} lectures on ${course.title}.`,
+      date: course.updated ?? TODAY,
+      tags: [course.title, ...new Set(course.lectures.flatMap((l) => l.tags))],
+      url: courseUrl,
+      schemaType: "Course",
+      ogType: "website",
+    });
+    await writePage(join("teaching", course.slug, "index.html"), html);
+    urls.push({ loc: courseUrl, lastmod: course.updated, priority: "0.7" });
+
+    for (const lecture of course.lectures) {
+      const lectureUrl = `${SITE}/teaching/${course.slug}/${lecture.slug}/`;
+      html = await snapshot(page, `/teaching/${course.slug}/${lecture.slug}`, "article h1");
+      html = injectPostSeo(html, {
+        title: `${lecture.title} · ${course.title}`,
+        summary: lecture.description || `Lecture ${lecture.number} of ${course.title}.`,
+        date: lecture.date ?? course.updated ?? TODAY,
+        tags: lecture.tags.length ? lecture.tags : [course.title],
+        url: lectureUrl,
+        schemaType: "LearningResource",
+      });
+      await writePage(join("teaching", course.slug, lecture.slug, "index.html"), html);
+      urls.push({ loc: lectureUrl, lastmod: lecture.date, priority: "0.7" });
+    }
+  }
+  return urls;
+}
+
+async function appendToSitemap(urls) {
+  const path = join(DIST, "sitemap.xml");
+  if (!urls.length || !existsSync(path)) return;
+  const xml = await readFile(path, "utf-8");
+  const entries = urls
+    .filter((u) => !xml.includes(`<loc>${u.loc}</loc>`))
+    .map(
+      (u) =>
+        `  <url>\n    <loc>${u.loc}</loc>\n    <lastmod>${u.lastmod ?? TODAY}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>${u.priority}</priority>\n  </url>`
+    )
+    .join("\n");
+  if (!entries) return;
+  await writeFile(path, xml.replace("</urlset>", `${entries}\n</urlset>`), "utf-8");
+  console.log(`  ✓ sitemap.xml  (+${urls.length} teaching URLs)`);
+}
+
 async function main() {
   if (!existsSync(DIST)) {
     console.error("dist/ not found — run `vite build` first.");
@@ -172,6 +245,10 @@ async function main() {
     html = injectPostSeo(html, { ...meta, url });
     await writePage(join("post", slug, "index.html"), html);
   }
+
+  // Teaching hub, courses, lectures
+  const teachingUrls = await prerenderTeaching(page);
+  await appendToSitemap(teachingUrls);
 
   await browser.close();
   server.close();

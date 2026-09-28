@@ -21,6 +21,7 @@ export default {
 			fontFamily: {
 				'inter': ['Inter', 'sans-serif'],
 				'mono': ['"JetBrains Mono"', 'monospace'],
+				'serif': ['"Source Serif 4"', 'Georgia', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

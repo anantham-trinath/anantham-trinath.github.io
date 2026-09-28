@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# generated from public/teaching/**/*.md by scripts/teaching-index.mjs
+public/teaching/index.json
